@@ -6,14 +6,14 @@ This project looks for all possible triangular arbitrages from a starting token 
 
 
 
-Contens-
-  index.js - Main file 
-  oldIndex.sj - Used for farming UniswapV3 pool using logs
+##Contens-<br>
+  index.js - Main file <br>
+  oldIndex.sj - Used for farming UniswapV3 pool using logs<br>
   mapping.json - Token pair and tick mapped to pool address
 
-Setup - 
+##Setup - <br>
 
-  git clone https://github.com/mani99brar/TriArbBot.git
-  cd ./TriArbBot
-  npm install
+  git clone https://github.com/mani99brar/TriArbBot.git<br>
+  cd ./TriArbBot<br>
+  npm install<br>
   node index.js
