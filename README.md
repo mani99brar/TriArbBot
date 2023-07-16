@@ -6,12 +6,12 @@ This project looks for all possible triangular arbitrages from a starting token 
 
 
 
-<h3>Contens-<br>
+<h2>Contents-</h2><br> <br>
   index.js - Main file <br>
   oldIndex.sj - Used for farming UniswapV3 pool using logs<br>
   mapping.json - Token pair and tick mapped to pool address
 
-<h3>Setup - <br>
+<h2>Setup</h2> - <br><br>
 
   git clone https://github.com/mani99brar/TriArbBot.git<br>
   cd ./TriArbBot<br>
