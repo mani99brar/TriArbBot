@@ -1,21 +1,11 @@
-const express = require('express');
 const axios = require('axios');
 const poolData = require('./mapping.json');
 const {ethers} =require('ethers');
-const app = express();
-const PORT = 3001;
 const endpoint = 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3';
 const tokenToPool = new Map(Object.entries(poolData));
-const fs = require("fs");
-const {promisify} =require('util');
-const writeFileAsync = promisify(fs.writeFile);
-const readFileAsync = promisify(fs.readFile);
 const Quoter = require('@uniswap/v3-periphery/artifacts/contracts/lens/Quoter.sol/Quoter.json');
-const { abi: Quoter2Abi } = require('@uniswap/v3-periphery/artifacts/contracts/lens/QuoterV2.sol/QuoterV2.json')
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+
 
 //Consts
 const QUOTER_CONTRACT_ADDRESS ='0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6';
@@ -23,12 +13,6 @@ const QUOTER2_ADDRESS = '0x61fFE014bA17989E743c5F6cB21bF9697530B21e'
 const provider = new ethers.providers.JsonRpcProvider('https://rpc.ankr.com/eth');
 const WETH_ADDRESS = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
 const USDC_ADDRESS = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'
-
-const quoterContract = new ethers.Contract(
-  QUOTER2_ADDRESS,
-  Quoter2Abi,
-  provider
-)
 
 const quoterContract1 = new ethers.Contract(
   QUOTER_CONTRACT_ADDRESS,
