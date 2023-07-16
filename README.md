@@ -4,8 +4,6 @@ This project looks for all possible triangular arbitrages from a starting token 
 
 ![Screenshot from 2023-07-16 17-31-14](https://github.com/mani99brar/TriArbBot/assets/106914483/dfa19808-c3ce-4efe-9318-d8d77e0fea83)
 
-
-
 <h2>Contents:</h2><br><br>
   index.js - Main file <br>
   oldIndex.js - Used for farming UniswapV3 pool using logs<br>
@@ -13,7 +11,9 @@ This project looks for all possible triangular arbitrages from a starting token 
 
 <h2>Setup:</h2><br><br>
 
-  git clone https://github.com/mani99brar/TriArbBot.git<br>
-  cd ./TriArbBot<br>
-  npm install<br>
-  node index.js
+git clone https://github.com/mani99brar/TriArbBot.git<br>
+cd ./TriArbBot
+<br>
+npm install
+<br>
+node index.js
