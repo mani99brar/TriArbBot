@@ -1,13 +1,7 @@
 const express = require('express');
-const {Web3} = require('web3');
 const {ethers} =require('ethers');
-const computePoolAddress = require('@uniswap/v3-sdk');
-const SupportedChainId = require('@uniswap/v3-sdk');
-const Token = require('@uniswap/v3-sdk');
-const Quoter = require('@uniswap/v3-periphery/artifacts/contracts/lens/Quoter.sol/Quoter.json');
 const IUniswapV3PoolABI  = require('@uniswap/v3-core/artifacts/contracts/interfaces/IUniswapV3Pool.sol/IUniswapV3Pool.json');
 const FactoryABI = require('@uniswap/v3-core/artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json')
-const {TickMath,FullMath} = require('@uniswap/v3-sdk')
 const fs = require("fs");
 const {promisify} =require('util');
 const writeFileAsync = promisify(fs.writeFile);
@@ -16,13 +10,11 @@ const readFileAsync = promisify(fs.readFile);
 const app = express();
 const port = 3000;
 
-const web3 = new Web3("https://rpc.ankr.com/eth");
 
 
 //Constants
 
 const POOL_FACTORY_CONTRACT_ADDRESS= '0x1F98431c8aD98523631AE4a59f267346ea31F984'; 
-const QUOTER_CONTRACT_ADDRESS='0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6';
 
 const provider = new ethers.providers.JsonRpcProvider('https://rpc.ankr.com/eth');
 
